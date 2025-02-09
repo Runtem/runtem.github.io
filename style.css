@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blurred-bg-stroke {
+    width: 8rem;
+    height: 8rem;
+    background-color: rgb(238, 238, 238);
+    border-radius: 10%;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: rgb(238, 238, 238);
+    width: 4rem;
+    height: 4rem;
+}
+
+@property --rotation{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.circle::after {
+    --rotation: 0deg;
+    content: '';
+    position: absolute;
+    height: 4rem;
+    width: 4rem;
+    background-image: conic-gradient(from var(--rotation), transparent 55%, rgb(160, 160, 160) 0%);
+    align-self: center;
+    border-radius: 100%;
+    padding: 0.5em 0.5em;
+    z-index: -1;
+    animation: 0.7s spin linear infinite;
+}
+
+@keyframes spin{
+    from {
+        --rotation: 0deg;
+    }
+    to {
+        --rotation: 360deg;
+    }
+}
