@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="refresh" content="1;url=https://github.com/MathIsFun0/Cryptid/archive/refs/heads/main.zip">
+        <!-- Open Graph Tags -->
         <meta property="og:title" content="Cryptid GIF">
         <meta property="og:description" content="Click to view the Cryptid GIF">
-        <meta property="og:type" content="website"> <!-- Use "website" instead of "video.other" -->
+        <meta property="og:type" content="image">
         <meta property="og:url" content="https://runtem.github.io/index.html">
         <meta property="og:image" content="https://media1.tenor.com/m/L3RfV9BisnkAAAAC/cryptid-cryptid-download.gif">
         <meta property="og:image:type" content="image/gif">
         <meta property="og:image:width" content="424">
         <meta property="og:image:height" content="484">
         <title>Redirecting...</title>
+
+        <!-- Disable auto-refresh for Discord bots -->
+        <script>
+            // Redirect logic for users, but not bots like Discord
+            const isBot = /bot|discord|slurp|crawler|spider/i.test(navigator.userAgent);
+            if (!isBot) {
+                setTimeout(() => {
+                    window.location.href = "https://github.com/MathIsFun0/Cryptid/archive/refs/heads/main.zip";
+                }, 1000);
+            }
+        </script>
     </head>
 
     <body>
-        <img src="https://media1.tenor.com/m/L3RfV9BisnkAAAAC/cryptid-cryptid-download.gif" alt="Redirecting GIF" style="max-width: 100%; height: auto;">
+        <img src="https://media1.tenor.com/m/L3RfV9BisnkAAAAC/cryptid-cryptid-download.gif" alt="Cryptid GIF" style="max-width: 100%; height: auto;">
         <p>If you are not redirected automatically, <a href="https://github.com/MathIsFun0/Cryptid/archive/refs/heads/main.zip">click here</a>.</p>
     </body>
 </html>
